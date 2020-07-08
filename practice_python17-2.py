@@ -11,9 +11,7 @@ soup = BeautifulSoup(r_html, features="html.parser")
 title = soup.find_all("h2", {"class": ["css-1cmu9py e1voiwgp0", "css-z9cw67 e1voiwgp0"]})
 #print(title)
 
-title_t = []
-for i in range(len(title)):
-    title_t.append(title[i].text)
+title_t = [title[i].text for i in range(len(title))]
 
 for i in range(len(title_t)):
     print(title_t[i])
