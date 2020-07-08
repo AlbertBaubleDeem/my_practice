@@ -6,7 +6,7 @@ r = requests.get(url)
 r_html = r.text
 
 soup = BeautifulSoup(r_html, features="html.parser")
-readable = soup.decode(pretty_print=True)
+#readable = soup.decode(pretty_print=True)
 
 title = soup.find_all("h2", {"class": ["css-1cmu9py e1voiwgp0", "css-z9cw67 e1voiwgp0"]})
 #print(title)
