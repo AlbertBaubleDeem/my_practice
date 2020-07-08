@@ -18,4 +18,4 @@ for i in range(len(title)):
 for i in range(len(title_t)):
     print(title_t[i])
 
-print(len(title_t))
+print('\n' + str(len(title_t)) + ' ARTICLE HEADINGS WERE FETCHED.')
