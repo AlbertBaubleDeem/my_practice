@@ -35,7 +35,6 @@ def playerinput(x):
         else:
             print("Invalid input. Please enter a 4 digit number.")
 
-
 print('Welcome to the Cows and Bulls Game!')
 
 secret_num = tuple(secret_num())
