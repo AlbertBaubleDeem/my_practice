@@ -30,7 +30,7 @@ def compare_bulls_cows():
 def playerinput(x):
     while True:
         playerinput = input(x)
-        if playerinput.isdecimal and len(list(str(playerinput))) == 4:
+        if playerinput.isdecimal() and len(list(str(playerinput))) == 4:
             return playerinput 
         else:
             print("Invalid input. Please enter a 4 digit number.")
