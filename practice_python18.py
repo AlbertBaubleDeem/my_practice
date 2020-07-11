@@ -39,8 +39,8 @@ print('Welcome to the Cows and Bulls Game!')
 
 secret_num = tuple(secret_num())
 guess = tuple()
-bulls =[]
-cows = []
+bulls =[] # Saves bulls into a list, so the game can be tested by printing the list.
+cows = [] # Saves cows into a list, so the game can be tested by printing the list.
 turns = 0
 
 while True:
