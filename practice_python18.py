@@ -44,13 +44,11 @@ cows = []
 turns = 0
 
 while True:
-
-    if guess == secret_num:
-        turns = turns + 1
+    turns = turns + 1
+    if guess == secret_num:        
         print(f"You have won. It took you {str(turns)} turns.")
         break
     else:
-        turns = turns + 1
         bulls =[]
         cows = []
         guess = tuple(playerinput('Enter your guess: '))
