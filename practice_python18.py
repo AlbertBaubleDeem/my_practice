@@ -1,14 +1,14 @@
 '''
 This is a game of Cows And Bulls
 
-Game uses gen_num method to randomly generate a 4-digit number *secret_num*. 
-User uses input function to enter their guess *guess* on the generated 4-digit number. 
+Game uses gen_num method to randomly generate a 4-digit number *secret_num*.
+User uses input function to enter their guess *guess* on the generated 4-digit number.
 
-For every digit that the user guessed correctly in the correct place, they have a “cow." The correct digit is stored in *cows* list.
-For every digit the user guessed correctly in the wrong place is a “bull.” The correct digit is stored in *bulls* list.
-Every time the user makes a guess, game tells user how many “cows” and “bulls” they have by printing len(bulls) and len(cows).
+For every digit that the user guessed correctly in the correct place, they have a "cow." The correct digit is stored in *cows* list.
+For every digit the user guessed correctly in the wrong place is a "bull." The correct digit is stored in *bulls* list.
+Every time the user makes a guess, game tells user how many "cows" and "bulls" they have by printing *len(bulls)* and *len(cows)*.
 
-Once the user guesses the correct number, the game is over. 
+Once the user guesses the correct number, the game is over.
 
 Keep track of the number of guesses the user makes throughout the game and tell the user at the end.
 '''
@@ -31,7 +31,7 @@ def playerinput(x):
     while True:
         playerinput = input(x)
         if playerinput.isdecimal() and len(list(str(playerinput))) == 4:
-            return playerinput 
+            return playerinput
         else:
             print("Invalid input. Please enter a 4 digit number.")
 
@@ -45,7 +45,7 @@ turns = 0
 
 while True:
     turns = turns + 1
-    if guess == secret_num:        
+    if guess == secret_num:
         print(f"You have won. It took you {str(turns)} turns.")
         break
     else:
