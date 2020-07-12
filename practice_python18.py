@@ -47,6 +47,7 @@ while True:
     turns = turns + 1
     if guess == secret_num:
         print(f"You have won. It took you {str(turns)} turns.")
+        input()
         break
     else:
         bulls = []
