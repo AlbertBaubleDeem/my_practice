@@ -17,8 +17,8 @@ import random
 
 # Generates the 4 digit secret_num.
 def secret_num():
-    secret_num = str(random.randint(1000, 9999))
-    return list(secret_num)
+    random_num = str(random.randint(1000, 9999))
+    return list(random_num)
 # Compares user's guess to the secret_num.
 def compare_bulls_cows():
     for j in range(0,4):
@@ -27,9 +27,9 @@ def compare_bulls_cows():
         elif guess[j] in secret_num:
             bulls.append(guess[j])
 # Sanitizes user's input.
-def playerinput(x):
+def playerinput(arg):
     while True:
-        playerinput = input(x)
+        playerinput = input(arg)
         if playerinput.isdecimal() and len(list(str(playerinput))) == 4:
             return playerinput
         else:
@@ -39,7 +39,7 @@ print('Welcome to the Cows and Bulls Game!')
 
 secret_num = tuple(secret_num())
 guess = tuple()
-bulls =[] # Saves bulls into a list, so the game can be tested by printing the list.
+bulls = [] # Saves bulls into a list, so the game can be tested by printing the list.
 cows = [] # Saves cows into a list, so the game can be tested by printing the list.
 turns = 0
 
@@ -49,7 +49,7 @@ while True:
         print(f"You have won. It took you {str(turns)} turns.")
         break
     else:
-        bulls =[]
+        bulls = []
         cows = []
         guess = tuple(playerinput('Enter your guess: '))
         compare_bulls_cows()
